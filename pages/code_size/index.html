@@ -196,7 +196,7 @@
                             <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>결재문서함</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>업무포인트 내역</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>로그아웃</a></li>
+                            <li><a href="/web/interp"><i class="material-icons">input</i>로그아웃</a></li>
                         </ul>
                     </div>
                 </div>
@@ -667,9 +667,10 @@
                                             <th width="60%">Size</th>
                                             <th ></th>
                                             <th width="4%"></th>
+                                            <th width="4%"></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="code-size-table-body">
                                         <tr>
                                             <td>1</td>
                                             <td>ruru</td>
@@ -678,6 +679,11 @@
                                             <td>
                                                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modify">
                                                     <i class="material-icons">mode_edit</i>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-link" data-toggle="modal">
+                                                    <i class="material-icons">mode_delete</i>
                                                 </button>
                                             </td>
                                         </tr>
@@ -714,14 +720,14 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="코드/Codigo" />
+                                                <input id="code-size-new-code" type="text" class="form-control" placeholder="코드/Codigo" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="원사/yarn"/>
+                                                <input id="code-size-new-size" type="text" class="form-control" placeholder="원사/yarn"/>
                                             </div>
                                         </div>
                                     </div>
@@ -729,7 +735,7 @@
                                 <div class="row clearfix">
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                                        <button type="button" class="btn btn-primary" >신규추가</button>
+                                        <button id="code-size-btn-add" type="button" class="btn btn-primary" data-dismiss="modal">신규추가</button>
                                     </div>
                                 </div>
                             </div>
@@ -759,14 +765,14 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="코드/Codigo" value=""/>
+                                                <input id="code-size-edit-code" type="text" class="form-control" placeholder="코드/Codigo" value=""/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="원사명/yarn" value=""/>
+                                                <input id="code-size-edit-size" type="text" class="form-control" placeholder="원사명/yarn" value=""/>
                                             </div>
                                         </div>
                                     </div>
@@ -774,7 +780,7 @@
                                 <div class="row clearfix">
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                                        <button type="button" class="btn btn-primary" >수정하기</button>
+                                        <button id="code-size-btn-edit" type="button" class="btn btn-primary" data-dismiss="modal">수정하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -831,6 +837,7 @@
     <!-- Demo Js -->
     <script src="../../js/demo.js"></script>
 
+    <script src="../../js/code/size.js"></script>
 
 </body>
 

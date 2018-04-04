@@ -196,7 +196,7 @@
                             <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>결재문서함</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>업무포인트 내역</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>로그아웃</a></li>
+                            <li><a href="/web/interp"><i class="material-icons">input</i>로그아웃</a></li>
                         </ul>
                     </div>
                 </div>
@@ -667,9 +667,10 @@
                                             <th width="60%">원단명</th>
                                             <th ></th>
                                             <th width="4%"></th>
+                                            <th width="4%"></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="code-fabric-table-body">
                                         <tr>
                                             <td>1</td>
                                             <td>ruru</td>
@@ -678,6 +679,11 @@
                                             <td>
                                                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modify">
                                                     <i class="material-icons">mode_edit</i>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modify">
+                                                    <i class="material-icons">mode_delete</i>
                                                 </button>
                                             </td>
                                         </tr>
@@ -713,14 +719,14 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="코드/Codigo" />
+                                                <input id="code-fabric-new-code" type="text" class="form-control" placeholder="코드/Codigo" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="원단/Fabric"/>
+                                                <input id="code-fabric-new-name" type="text" class="form-control" placeholder="원단/Fabric"/>
                                             </div>
                                         </div>
                                     </div>
@@ -728,7 +734,7 @@
                                 <div class="row clearfix">
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                                        <button type="button" class="btn btn-primary" >신규추가</button>
+                                        <button id="code-fabric-btn-add" type="button" class="btn btn-primary" data-dismiss="modal">신규추가</button>
                                     </div>
                                 </div>
                             </div>
@@ -758,14 +764,14 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="코드/Codigo" value=""/>
+                                                <input id="code-fabric-edit-code" type="text" class="form-control" placeholder="코드/Codigo" value=""/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="원단명" value=""/>
+                                                <input id="code-fabric-edit-name" type="text" class="form-control" placeholder="원단명" value=""/>
                                             </div>
                                         </div>
                                     </div>
@@ -773,7 +779,7 @@
                                 <div class="row clearfix">
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                                        <button type="button" class="btn btn-primary" >수정하기</button>
+                                        <button id="code-fabric-btn-edit" type="button" class="btn btn-primary" data-dismiss="modal">수정하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -830,6 +836,7 @@
     <!-- Demo Js -->
     <script src="../../js/demo.js"></script>
 
+    <script src="../../js/code/fabric.js"></script>
 
 </body>
 

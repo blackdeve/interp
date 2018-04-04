@@ -204,7 +204,7 @@
                             <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>결재문서함</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>업무포인트 내역</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>로그아웃</a></li>
+                            <li><a href="/web/interp"><i class="material-icons">input</i>로그아웃</a></li>
                         </ul>
                     </div>
                 </div>
@@ -730,8 +730,8 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody>
-                                        <tr>
+                                    <tbody id="fabric-out-table-body">
+                                        <!-- <tr>
                                             <td style="cursor:pointer;" data-toggle="modal" data-target="#editFabric">im</td>
                                             <td>16-1431</td>
                                             <td class="NumericData">928.00</td>
@@ -756,9 +756,7 @@
                                             <td class="NumericData">928.00</td>
                                             <td class="NumericData"></td>
                                             <td>TELA SUPIMA/MICROMODAL SLUB</td>
-                                        </tr>
-
-
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
@@ -789,7 +787,7 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Tipo de Tela"/>
+                                                <input id="fabricout-new-tipo-de-tela" type="text" class="form-control" placeholder="Tipo de Tela"/>
                                             </div>
                                         </div>
                                     </div>
@@ -797,78 +795,42 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Dev" />
+                                                <input id="fabricout-new-dev" type="text" class="form-control" placeholder="Dev" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Numero de Packing"/>
+                                                <input id="fabricout-new-number-de-packing" type="text" class="form-control" placeholder="Numero de Packing"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Yardas"/>
+                                                <input id="fabricout-new-yardas" type="text" class="form-control" placeholder="Yardas"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Color"/>
+                                                <input id="fabricout-new-color" type="text" class="form-control" placeholder="Color"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Lote"/>
+                                                <input id="fabricout-new-lote" type="text" class="form-control" placeholder="Lote"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="datepicker form-control" placeholder="Fecha"/>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="De Rollos"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="# Envio" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Corte Real" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Diferencia" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="File#" />
+                                                <input id="fabricout-new-fecha" type="text" class="datepicker form-control" placeholder="Fecha"/>
                                             </div>
                                         </div>
                                     </div>
@@ -876,84 +838,120 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="File# / Tela Usada" />
+                                                <input id="fabricout-new-de-rollos" type="text" class="form-control" placeholder="De Rollos"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="P.O." />
+                                                <input id="fabricout-new-envio" type="text" class="form-control" placeholder="# Envio" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Consumo Real" />
+                                                <input id="fabricout-new-corte-real" type="text" class="form-control" placeholder="Corte Real" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Estilo" />
+                                                <input id="fabricout-new-diferencia" type="text" class="form-control" placeholder="Diferencia" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="XS" />
+                                                <input id="fabricout-new-file" type="text" class="form-control" placeholder="File#" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-new-tela-usada" type="text" class="form-control" placeholder="File# / Tela Usada" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="S" />
+                                                <input id="fabricout-new-PO" type="text" class="form-control" placeholder="P.O." />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="M" />
+                                                <input id="fabricout-new-consumo-real" type="text" class="form-control" placeholder="Consumo Real" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="L" />
+                                                <input id="fabricout-new-Estilo" type="text" class="form-control" placeholder="Estilo" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="XL" />
+                                                <input id="fabricout-new-XS" type="text" class="form-control" placeholder="XS" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="2XLT" />
+                                                <input id="fabricout-new-S" type="text" class="form-control" placeholder="S" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Single" />
+                                                <input id="fabricout-new-M" type="text" class="form-control" placeholder="M" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Rib" />
+                                                <input id="fabricout-new-L" type="text" class="form-control" placeholder="L" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-new-XL" type="text" class="form-control" placeholder="XL" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-new-2XLT" type="text" class="form-control" placeholder="2XLT" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-new-single" type="text" class="form-control" placeholder="Single" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-new-rib" type="text" class="form-control" placeholder="Rib" />
                                             </div>
                                         </div>
                                     </div>
@@ -965,7 +963,7 @@
                                 <div class="row clearfix">
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-primary" >Añadir</button>
+                                        <button id="fabricout-btn-add" type="button" class="btn btn-primary" data-dismiss="modal">Añadir</button>
                                     </div>
                                 </div>
 
@@ -997,7 +995,7 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Tipo de Tela"/>
+                                                <input id="fabricout-edit-tipo-de-tela" type="text" class="form-control" placeholder="Tipo de Tela"/>
                                             </div>
                                         </div>
                                     </div>
@@ -1005,78 +1003,42 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Dev" />
+                                                <input id="fabricout-edit-dev" type="text" class="form-control" placeholder="Dev" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Numero de Packing"/>
+                                                <input id="fabricout-edit-number-de-packing" type="text" class="form-control" placeholder="Numero de Packing"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Yardas"/>
+                                                <input id="fabricout-edit-yardas" type="text" class="form-control" placeholder="Yardas"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Color"/>
+                                                <input id="fabricout-edit-color" type="text" class="form-control" placeholder="Color"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Lote"/>
+                                                <input id="fabricout-edit-lote" type="text" class="form-control" placeholder="Lote"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="datepicker form-control" placeholder="Fecha"/>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="De Rollos"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="# Envio" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Corte Real" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Diferencia" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="File#" />
+                                                <input id="fabricout-edit-fecha" type="text" class="datepicker form-control" placeholder="Fecha"/>
                                             </div>
                                         </div>
                                     </div>
@@ -1084,84 +1046,120 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="File# / Tela Usada" />
+                                                <input id="fabricout-edit-de-rollos" type="text" class="form-control" placeholder="De Rollos"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="P.O." />
+                                                <input id="fabricout-edit-envio" type="text" class="form-control" placeholder="# Envio" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Consumo Real" />
+                                                <input id="fabricout-edit-corte-real" type="text" class="form-control" placeholder="Corte Real" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Estilo" />
+                                                <input id="fabricout-edit-diferencia" type="text" class="form-control" placeholder="Diferencia" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="XS" />
+                                                <input id="fabricout-edit-file" type="text" class="form-control" placeholder="File#" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-edit-tela-usada" type="text" class="form-control" placeholder="File# / Tela Usada" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="S" />
+                                                <input id="fabricout-edit-PO" type="text" class="form-control" placeholder="P.O." />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="M" />
+                                                <input id="fabricout-edit-consumo-real" type="text" class="form-control" placeholder="Consumo Real" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="L" />
+                                                <input id="fabricout-edit-Estilo" type="text" class="form-control" placeholder="Estilo" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="XL" />
+                                                <input id="fabricout-edit-XS" type="text" class="form-control" placeholder="XS" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="2XLT" />
+                                                <input id="fabricout-edit-S" type="text" class="form-control" placeholder="S" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Single" />
+                                                <input id="fabricout-edit-M" type="text" class="form-control" placeholder="M" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Rib" />
+                                                <input id="fabricout-edit-L" type="text" class="form-control" placeholder="L" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-edit-XL" type="text" class="form-control" placeholder="XL" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-edit-2XLT" type="text" class="form-control" placeholder="2XLT" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-edit-single" type="text" class="form-control" placeholder="Single" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input id="fabricout-edit-rib" type="text" class="form-control" placeholder="Rib" />
                                             </div>
                                         </div>
                                     </div>
@@ -1173,7 +1171,7 @@
                                 <div class="row clearfix">
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-primary" >Editar</button>
+                                        <button id="fabricout-btn-edit" type="button" class="btn btn-primary" >Editar</button>
                                     </div>
                                 </div>
 
@@ -1244,6 +1242,8 @@
     <script src="../../js/pages/ui/range-sliders.js"></script>
 
     <script src="../../js/demo.js"></script>
+
+    <script src="../../js/pages/fabric/index.js"></script>
 
 </body>
 
