@@ -1,0 +1,860 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Welcome To | INT ERP System</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet">
+
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="plugins/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="css/themes/all-themes.css" rel="stylesheet" />
+</head>
+
+<body class="theme-indigo">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="검색할 내용을 입력하세요...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="main.html">INT, S.A. - Enterprise Resource Management</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search -->
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- #END# Call Search -->
+                    <!-- Notifications -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="material-icons">notifications</i>
+                            <span class="label-count">7</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">알림 메시지</li>
+                            <li class="body">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">person_add</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>Bryan Cho 결재요청 문서대기</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 14 mins ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-cyan">
+                                                <i class="material-icons">add_shopping_cart</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>Jason Woo 결재요청 문서대기</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 22 mins ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-red">
+                                                <i class="material-icons">delete_forever</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>Kyu Kim 결재요청 문서대기</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 3 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-orange">
+                                                <i class="material-icons">mode_edit</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>Mario 거래처 정보 변경함</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 2 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-blue-grey">
+                                                <i class="material-icons">comment</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>D.Y.Kim 전표 결재승인</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 4 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="javascript:void(0);">모든 알림 보기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- #END# Notifications -->
+
+                    <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="images/bry.png" width="48" height="48" alt="User" /><span class="badge bg-blue animated rubberBand">ERP 137.45</span>
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bryan Cho</div>
+                    <div class="email">bryan.cho</div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>My Info.</a></li>
+                            <li role="seperator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Department</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Approval Docs.</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>My Points</a></li>
+                            <li role="seperator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+
+<!-- 공장 시스템 메뉴 -->
+                    <li class="header bg-indigo">Production</li>
+                    <li class="active">
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons ">description</i>
+                            <span>Sewing</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/factory_order/index.html">Add Order</a>
+                            </li>
+                            <li>
+                                <a href="pages/factory_order/daily_product_summary.html">Daily Production Summary</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons ">exit_to_app</i>
+                            <span>Fabric</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/factory_fabric/index.html">Fabric Stock</a>
+                            </li>
+                            <li>
+                                <a href="pages/factory_fabric/fabricin.html">Fabric In</a>
+                            </li>
+                            <li>
+                                <a href="pages/factory_fabric/fabricout.html">Fabric Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons ">style</i>
+                            <span>Material</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/factory_material/index.html">Material Stock</a>
+                            </li>
+                            <li>
+                                <a href="pages/factory_material/materialin.html">Material In</a>
+                            </li>
+                            <li>
+                                <a href="pages/factory_material/materialout.html">Material Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="pages/factory_cut/index.html">
+                            <i class="material-icons ">content_cut</i>
+                            <span>Cutting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/factory_out/index.html">
+                            <i class="material-icons ">fingerprint</i>
+                            <span>Printing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/factory_wash/index.html">
+                            <i class="material-icons ">video_label</i>
+                            <span>Washing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons ">people_outline</i>
+                            <span>Production</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/factory_sew/index.html">Daily Production</a>
+                            </li>
+                            <li>
+                                <a href="pages/factory_sew/product_line.html">Hourly Production</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="pages/factory_plancha/index.html">
+                            <i class="material-icons ">room_service</i>
+                            <span>Iron</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/factory_insp/index.html">
+                            <i class="material-icons ">flare</i>
+                            <span>Inspection</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/factory_finish/index.html">
+                            <i class="material-icons ">grid_on</i>
+                            <span>Finishing</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/factory_ship/index.html">
+                            <i class="material-icons ">directions_bus</i>
+                            <span>Shipment</span>
+                        </a>
+                    </li>
+            <!-- #공장 시스템 메뉴 -->
+
+
+            <!-- 코드관리 메뉴 -->
+                    <li class="header bg-indigo">Codes</li>
+                    <li>
+                        <a href="pages/user/index.html">
+                            <i class="material-icons ">group</i>
+                            <span>User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_client/index.html">
+                            <i class="material-icons ">group</i>
+                            <span>Buyer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_yarn/index.html">
+                            <i class="material-icons ">public</i>
+                            <span>Yarn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_fabric/index.html">
+                            <i class="material-icons ">hot_tub</i>
+                            <span>Fabric</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_material/index.html">
+                            <i class="material-icons ">local_offer</i>
+                            <span>Material</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_color/index.html">
+                            <i class="material-icons ">local_offer</i>
+                            <span>Color</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_size/index.html">
+                            <i class="material-icons ">local_offer</i>
+                            <span>Size</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/code_sizegroup/index.html">
+                            <i class="material-icons ">local_offer</i>
+                            <span>SizeGroup</span>
+                        </a>
+                    </li>
+
+<!-- #코드관리 메뉴 -->
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2017 <a href="javascript:void(0);">INT, S.A. - ERP System</a>
+                </div>
+                <div class="version">
+                    <b>Version: </b> 1.2.1
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li role="presentation" class="active"><a href="#skins" data-toggle="tab">색상</a></li>
+                <li role="presentation"><a href="#settings" data-toggle="tab">설정</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                    <ul class="demo-choose-skin">
+                        <li data-theme="red" class="active">
+                            <div class="red"></div>
+                            <span>Red</span>
+                        </li>
+                        <li data-theme="pink">
+                            <div class="pink"></div>
+                            <span>Pink</span>
+                        </li>
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                            <span>Purple</span>
+                        </li>
+                        <li data-theme="deep-purple">
+                            <div class="deep-purple"></div>
+                            <span>Deep Purple</span>
+                        </li>
+                        <li data-theme="indigo">
+                            <div class="indigo"></div>
+                            <span>Indigo</span>
+                        </li>
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                            <span>Blue</span>
+                        </li>
+                        <li data-theme="light-blue">
+                            <div class="light-blue"></div>
+                            <span>Light Blue</span>
+                        </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                            <span>Cyan</span>
+                        </li>
+                        <li data-theme="teal">
+                            <div class="teal"></div>
+                            <span>Teal</span>
+                        </li>
+                        <li data-theme="green">
+                            <div class="green"></div>
+                            <span>Green</span>
+                        </li>
+                        <li data-theme="light-green">
+                            <div class="light-green"></div>
+                            <span>Light Green</span>
+                        </li>
+                        <li data-theme="lime">
+                            <div class="lime"></div>
+                            <span>Lime</span>
+                        </li>
+                        <li data-theme="yellow">
+                            <div class="yellow"></div>
+                            <span>Yellow</span>
+                        </li>
+                        <li data-theme="amber">
+                            <div class="amber"></div>
+                            <span>Amber</span>
+                        </li>
+                        <li data-theme="orange">
+                            <div class="orange"></div>
+                            <span>Orange</span>
+                        </li>
+                        <li data-theme="deep-orange">
+                            <div class="deep-orange"></div>
+                            <span>Deep Orange</span>
+                        </li>
+                        <li data-theme="brown">
+                            <div class="brown"></div>
+                            <span>Brown</span>
+                        </li>
+                        <li data-theme="grey">
+                            <div class="grey"></div>
+                            <span>Grey</span>
+                        </li>
+                        <li data-theme="blue-grey">
+                            <div class="blue-grey"></div>
+                            <span>Blue Grey</span>
+                        </li>
+                        <li data-theme="black">
+                            <div class="black"></div>
+                            <span>Black</span>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">
+                    <div class="demo-settings">
+                        <p>일반 설정</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>핸드폰 알림메시지</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>이메일 알림</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>결재 확인</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>알림받기</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>부재 중 자동알림</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>계정 설정</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Offline 설정</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>계정정보 저장</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>2018 오더현황</h2>
+            </div>
+
+            <!-- Widgets -->
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box  hover-expand-effect">
+                        <div class="icon bg-pink">
+                            <i class="material-icons">local_atm</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">전체 오더목표</div>
+                            <div class="number">$12,526</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box  hover-expand-effect">
+                        <div class="icon bg-cyan">
+                            <i class="material-icons">widgets</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">전체 오더수주</div>
+                            <div class="number">$12,526</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box  hover-expand-effect">
+                        <div class="icon bg-light-green">
+                            <i class="material-icons">directions_boat</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">전체 출고</div>
+                            <div class="number">$12,526</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box  hover-expand-effect">
+                        <div class="icon bg-orange">
+                            <i class="material-icons">playlist_add_check</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">SHORTAGE</div>
+                            <div class="number">$526</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Widgets -->
+            <!-- CPU Usage -->
+            <div class="row clearfix">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <div class="row clearfix">
+                                <div class="col-xs-12 col-sm-12">
+                                    <h2>생산현황</h2>
+                                </div>
+
+                            </div>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div id="real_time_chart" class="dashboard-flot-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# CPU Usage -->
+            <div class="row clearfix">
+                <!-- Visitors -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="body bg-indigo">
+                            <div class="sparkline" data-type="line" data-spot-Radius="4" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#fff"
+                                 data-min-Spot-Color="rgb(255,255,255)" data-max-Spot-Color="rgb(255,255,255)" data-spot-Color="rgb(255,255,255)"
+                                 data-offset="90" data-width="100%" data-height="92px" data-line-Width="2" data-line-Color="rgba(255,255,255,0.7)"
+                                 data-fill-Color="rgba(0, 188, 212, 0)">
+                                12,10,9,6,5,6,10,5,7,5,12,13,7,12,11
+                            </div>
+                            <ul class="dashboard-stat-list">
+                                <li>
+                                    TODAY
+                                    <span class="pull-right"><b>1,200</b> <small>Pcs</small></span>
+                                </li>
+                                <li>
+                                    YESTERDAY
+                                    <span class="pull-right"><b>3,872</b> <small>Pcs</small></span>
+                                </li>
+                                <li>
+                                    LAST WEEK
+                                    <span class="pull-right"><b>26,582</b> <small>Pcs</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Visitors -->
+                <!-- Latest Social Trends -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="body bg-purple">
+                            <div class="m-b--35 font-bold">바이어별 생산추이</div>
+                            <ul class="dashboard-stat-list">
+                                <li>
+                                    #JCrew
+                                    <span class="pull-right">
+                                        <i class="material-icons">trending_up</i>
+                                    </span>
+                                </li>
+                                <li>
+                                    #Li&Fung(Express)
+                                    <span class="pull-right">
+                                        <i class="material-icons">trending_down</i>
+                                    </span>
+                                </li>
+                                <li>
+                                    #Li&Fung(LuckyBrand)
+                                    <span class="pull-right">
+                                        <i class="material-icons">trending_up</i>
+                                    </span>
+                                </li>
+                                <li>
+                                    #Destination Maternity
+                                    <span class="pull-right">
+                                        <i class="material-icons">trending_up</i>
+                                    </span>
+                                </li>
+                                <li>
+                                    #Li&Fung(Khol's)
+                                    <span class="pull-right">
+                                        <i class="material-icons">trending_up</i>
+                                    </span>
+                                </li>
+                                <li>
+                                    #Lane Bryant
+                                    <span class="pull-right">
+                                        <i class="material-icons">trending_down</i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Latest Social Trends -->
+                <!-- Answered Tickets -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="body bg-teal">
+                            <div class="font-bold m-b--35">작업지시 발행티켓</div>
+                            <ul class="dashboard-stat-list">
+                                <li>
+                                    TODAY
+                                    <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                                </li>
+                                <li>
+                                    YESTERDAY
+                                    <span class="pull-right"><b>15</b> <small>TICKETS</small></span>
+                                </li>
+                                <li>
+                                    LAST WEEK
+                                    <span class="pull-right"><b>90</b> <small>TICKETS</small></span>
+                                </li>
+                                <li>
+                                    LAST MONTH
+                                    <span class="pull-right"><b>342</b> <small>TICKETS</small></span>
+                                </li>
+                                <li>
+                                    LAST YEAR
+                                    <span class="pull-right"><b>4 225</b> <small>TICKETS</small></span>
+                                </li>
+                                <li>
+                                    ALL
+                                    <span class="pull-right"><b>8 752</b> <small>TICKETS</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Answered Tickets -->
+            </div>
+
+            <div class="row clearfix">
+                <!-- Task Info -->
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2>오더별 진행현황</h2>
+
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-hover dashboard-task-infos">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>스타일</th>
+                                            <th>상태</th>
+                                            <th>바이어</th>
+                                            <th>진행상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>YU71K013R</td>
+                                            <td><span class="label bg-green">Sewing</span></td>
+                                            <td>Li&Fung (Kohl's)</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>22200085</td>
+                                            <td><span class="label bg-orange">Wait Material</span></td>
+                                            <td>Li&Fung (Express)</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>7MC8057</td>
+                                            <td><span class="label bg-blue">Cutting</span></td>
+                                            <td>Li&Fung (Costco)</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Task Info -->
+                <!-- Browser Usage -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="header">
+                            <h2>부서별 샘플요청</h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div id="donut_chart" class="dashboard-donut-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Browser Usage -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="plugins/raphael/raphael.min.js"></script>
+    <script src="plugins/morrisjs/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="plugins/chartjs/Chart.bundle.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="plugins/flot-charts/jquery.flot.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.time.js"></script>
+
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+    <script src="js/pages/index.js"></script>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+    <script src="js/pages/charts/flot.js"></script>
+
+</body>
+
+</html>
