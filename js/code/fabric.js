@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://18.217.120.229/code/fabric", function (data, status) {
+    var jqxhr = $.get("http://18.217.120.229:8080/code/fabric", function (data, status) {
         const { items } = data
         items.forEach(element => {
             addFabric(element)
@@ -20,7 +20,7 @@ $(document).on('click', '#code-fabric-item-edit', function () {
 $(document).on('click', '#code-fabric-item-delete', function () {
     var tr = $(this).parent().parent()
     const id = JSON.parse(tr.attr('fabricid'))
-    var jqxhr = $.post("http://18.217.120.229/code/fabric/delete", {
+    var jqxhr = $.post("http://18.217.120.229:8080/code/fabric/delete", {
         id
     }, function (data, status) {
         const no = JSON.parse(tr.children().eq(0).text()) - 1
@@ -62,7 +62,7 @@ $('#code-fabric-btn-add').click(() => {
     $('#code-fabric-new-code').val('')
     $('#code-fabric-new-name').val('')
     const item = {code, name}
-    var jqxhr = $.post("http://18.217.120.229/code/fabric/add", {
+    var jqxhr = $.post("http://18.217.120.229:8080/code/fabric/add", {
         item
     }, function (data, status) {
         addFabric(item)
@@ -75,7 +75,7 @@ $('#code-fabric-btn-edit').click(() => {
     const name = $('#code-fabric-edit-name').val()
     const item = {fabricid, code, name}
 
-    var jqxhr = $.post("http://18.217.120.229/code/fabric/edit", {
+    var jqxhr = $.post("http://18.217.120.229:8080/code/fabric/edit", {
         item
     }, function (data, status) {
         var tr = $('tr[fabricid=' + fabricid + ']')

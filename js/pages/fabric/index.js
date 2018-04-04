@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://18.217.120.229/fabricout", function (data, status) {
+    var jqxhr = $.get("http://18.217.120.229:8080/fabricout", function (data, status) {
         const {items} = data
         items.forEach(element => {
             addFabricout(element)
@@ -35,7 +35,7 @@ $('#fabricout-btn-add').click(function () {
     fabricout.single = $('#fabricout-new-single').val()
     fabricout.rib = $('#fabricout-new-rib').val()
     
-    var jqxhr = $.post("http://18.217.120.229/fabricout/add", {
+    var jqxhr = $.post("http://18.217.120.229:8080/fabricout/add", {
         item: fabricout
     }, function (data, status) {
         addFabricout(fabricout)

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://18.217.120.229/code/material", function (data, status) {
+    var jqxhr = $.get("http://18.217.120.229:8080/code/material", function (data, status) {
         const { items } = data
         items.forEach(element => {
             addMaterial(element)
@@ -20,7 +20,7 @@ $(document).on('click', '#code-material-item-edit', function () {
 $(document).on('click', '#code-material-item-delete', function () {
     var tr = $(this).parent().parent()
     const id = JSON.parse(tr.attr('materialid'))
-    var jqxhr = $.post("http://18.217.120.229/code/material/delete", {
+    var jqxhr = $.post("http://18.217.120.229:8080/code/material/delete", {
         id
     }, function (data, status) {
         const no = JSON.parse(tr.children().eq(0).text()) - 1
@@ -62,7 +62,7 @@ $('#code-material-btn-add').click(() => {
     $('#code-material-new-code').val('')
     $('#code-material-new-name').val('')
     const item = {code, name}
-    var jqxhr = $.post("http://18.217.120.229/code/material/add", {
+    var jqxhr = $.post("http://18.217.120.229:8080/code/material/add", {
         item
     }, function (data, status) {
         addMaterial(item)
@@ -75,7 +75,7 @@ $('#code-material-btn-edit').click(() => {
     const name = $('#code-material-edit-name').val()
     const item = {materialid, code, name}
 
-    var jqxhr = $.post("http://18.217.120.229/code/material/edit", {
+    var jqxhr = $.post("http://18.217.120.229:8080/code/material/edit", {
         item
     }, function (data, status) {
         var tr = $('tr[materialid=' + materialid + ']')
