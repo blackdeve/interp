@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://18.217.120.229:8080/code/yarn", function (data, status) {
+    var jqxhr = $.get("http://localhost:8080/code/yarn", function (data, status) {
         const { items } = data
         items.forEach(element => {
             addYarn(element)
@@ -20,7 +20,7 @@ $(document).on('click', '#code-yarn-item-edit', function () {
 $(document).on('click', '#code-yarn-item-delete', function () {
     var tr = $(this).parent().parent()
     const id = JSON.parse(tr.attr('yarnid'))
-    var jqxhr = $.post("http://18.217.120.229:8080/code/yarn/delete", {
+    var jqxhr = $.post("http://localhost:8080/code/yarn/delete", {
         id
     }, function (data, status) {
         const no = JSON.parse(tr.children().eq(0).text()) - 1
@@ -62,7 +62,7 @@ $('#code-yarn-btn-add').click(() => {
     $('#code-yarn-new-code').val('')
     $('#code-yarn-new-name').val('')
     const item = {code, name}
-    var jqxhr = $.post("http://18.217.120.229:8080/code/yarn/add", {
+    var jqxhr = $.post("http://localhost:8080/code/yarn/add", {
         item
     }, function (data, status) {
         addYarn(item)
@@ -75,7 +75,7 @@ $('#code-yarn-btn-edit').click(() => {
     const name = $('#code-yarn-edit-name').val()
     const item = {yarnid, code, name}
 
-    var jqxhr = $.post("http://18.217.120.229:8080/code/yarn/edit", {
+    var jqxhr = $.post("http://localhost:8080/code/yarn/edit", {
         item
     }, function (data, status) {
         var tr = $('tr[yarnid=' + yarnid + ']')

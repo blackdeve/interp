@@ -43,13 +43,17 @@ $('.tab a').on('click', function (e) {
 });
 
 $('#btn-login').click(function () {
-  var jqxhr = $.post("http://18.217.120.229:8080/login", {
+  console.log('login')
+  console.log($('#login-email').val())
+  console.log($('#login-password').val())
+  var jqxhr = $.post("http://localhost:8080/login", {
     email: $('#login-email').val(),
     password: $('#login-password').val()
   },
   function (data, status) {
+    console.log(data)
     if (data.success) {
-      $(location).attr('href', '/web/interp/main.html')
+      $(location).attr('href', '/main.html')
     }
     else{
       alert(data.msg)
@@ -58,7 +62,7 @@ $('#btn-login').click(function () {
 });
 
 $('#btn-signup').click(function () {
-  var jqxhr = $.post("http://18.217.120.229:8080/signup", {
+  var jqxhr = $.post("http://localhost:8080/signup", {
     email: $('#signup-email').val(),
     password: $('#signup-password').val(),
     first_name: $('#signup-first-name').val(),

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://18.217.120.229:8080/code/size", function (data, status) {
+    var jqxhr = $.get("http://localhost:8080/code/size", function (data, status) {
         const { items } = data
         console.log(items)
         items.forEach(element => {
@@ -21,7 +21,7 @@ $(document).on('click', '#code-size-item-edit', function () {
 $(document).on('click', '#code-size-item-delete', function () {
     var tr = $(this).parent().parent()
     const id = JSON.parse(tr.attr('sizeid'))
-    var jqxhr = $.post("http://18.217.120.229:8080/code/size/delete", {
+    var jqxhr = $.post("http://localhost:8080/code/size/delete", {
         id
     }, function (data, status) {
         const no = JSON.parse(tr.children().eq(0).text()) - 1
@@ -63,7 +63,7 @@ $('#code-size-btn-add').click(() => {
     $('#code-size-new-code').val('')
     $('#code-size-new-size').val('')
     const item = {code, size}
-    var jqxhr = $.post("http://18.217.120.229:8080/code/size/add", {
+    var jqxhr = $.post("http://localhost:8080/code/size/add", {
         item
     }, function (data, status) {
         addSize(item)
@@ -76,7 +76,7 @@ $('#code-size-btn-edit').click(() => {
     const size = $('#code-size-edit-size').val()
     const item = {sizeid, code, size}
 
-    var jqxhr = $.post("http://18.217.120.229:8080/code/size/edit", {
+    var jqxhr = $.post("http://localhost:8080/code/size/edit", {
         item
     }, function (data, status) {
         var tr = $('tr[sizeid=' + sizeid + ']')
