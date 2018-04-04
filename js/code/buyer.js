@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://localhost:8080/code/buyer", function (data, status) {
+    var jqxhr = $.get("http://18.217.120.229/code/buyer", function (data, status) {
         const { items } = data
         items.forEach(element => {
             addBuyer(element)
@@ -20,7 +20,7 @@ $(document).on('click', '#code-buyer-item-edit', function () {
 $(document).on('click', '#code-buyer-item-delete', function () {
     var tr = $(this).parent().parent()
     const id = JSON.parse(tr.attr('buyerid'))
-    var jqxhr = $.post("http://localhost:8080/code/buyer/delete", {
+    var jqxhr = $.post("http://18.217.120.229/code/buyer/delete", {
         id
     }, function (data, status) {
         const no = JSON.parse(tr.children().eq(0).text()) - 1
@@ -63,7 +63,7 @@ $('#code-buyer-btn-add').click(() => {
     $('#code-buyer-new-name').val('')
     const item = {code, name}
 
-    var jqxhr = $.post("http://localhost:8080/code/buyer/add", {
+    var jqxhr = $.post("http://18.217.120.229/code/buyer/add", {
         item
     }, function (data, status) {
         addBuyer(data.item)
@@ -76,7 +76,7 @@ $('#code-buyer-btn-edit').click(() => {
     const name = $('#code-buyer-edit-name').val()
     const item = {buyerid, code, name}
 
-    var jqxhr = $.post("http://localhost:8080/code/buyer/edit", {
+    var jqxhr = $.post("http://18.217.120.229/code/buyer/edit", {
         item
     }, function (data, status) {
         var tr = $('tr[buyerid=' + buyerid + ']')

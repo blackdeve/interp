@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://localhost:8080/code/user", function (data, status) {
+    var jqxhr = $.get("http://18.217.120.229/code/user", function (data, status) {
         const { items } = data
         items.forEach((element, idx) => {
             addUser(element, idx)

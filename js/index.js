@@ -46,7 +46,7 @@ $('#btn-login').click(function () {
   console.log('login')
   console.log($('#login-email').val())
   console.log($('#login-password').val())
-  var jqxhr = $.post("http://localhost:8080/login", {
+  var jqxhr = $.post("http://18.217.120.229:8080/login", {
     email: $('#login-email').val(),
     password: $('#login-password').val()
   },
@@ -62,7 +62,7 @@ $('#btn-login').click(function () {
 });
 
 $('#btn-signup').click(function () {
-  var jqxhr = $.post("http://localhost:8080/signup", {
+  var jqxhr = $.post("http://18.217.120.229/signup", {
     email: $('#signup-email').val(),
     password: $('#signup-password').val(),
     first_name: $('#signup-first-name').val(),

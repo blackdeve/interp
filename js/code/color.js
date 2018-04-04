@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var jqxhr = $.get("http://localhost:8080/code/color", function (data, status) {
+    var jqxhr = $.get("http://18.217.120.229/code/color", function (data, status) {
         const { items } = data
         console.log(items)
         items.forEach(element => {
@@ -21,7 +21,7 @@ $(document).on('click', '#code-color-item-edit', function () {
 $(document).on('click', '#code-color-item-delete', function () {
     var tr = $(this).parent().parent()
     const id = JSON.parse(tr.attr('colorid'))
-    var jqxhr = $.post("http://localhost:8080/code/color/delete", {
+    var jqxhr = $.post("http://18.217.120.229/code/color/delete", {
         id
     }, function (data, status) {
         const no = JSON.parse(tr.children().eq(0).text()) - 1
@@ -63,7 +63,7 @@ $('#code-color-btn-add').click(() => {
     $('#code-color-new-code').val('')
     $('#code-color-new-color').val('')
     const item = {code, color}
-    var jqxhr = $.post("http://localhost:8080/code/color/add", {
+    var jqxhr = $.post("http://18.217.120.229/code/color/add", {
         item
     }, function (data, status) {
         addColor(item)
@@ -76,7 +76,7 @@ $('#code-color-btn-edit').click(() => {
     const color = $('#code-color-edit-color').val()
     const item = {colorid, code, color}
 
-    var jqxhr = $.post("http://localhost:8080/code/color/edit", {
+    var jqxhr = $.post("http://18.217.120.229/code/color/edit", {
         item
     }, function (data, status) {
         var tr = $('tr[colorid=' + colorid + ']')
